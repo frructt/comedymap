@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ComedyMap</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	
+	<header>
+
+		<div class="header-container">
+			<h1>Comedymap.ru</h1>
+		</div>
+
+		<div class="select-container">
+			<div id="app">
+				<transition>
+					<!-- <p href="" class="menu" v-if="!show" @click="show = !show" key = "menu"><router-link to = "/">Воронеж</router-link></p>
+					<p href="" class="clear" v-else @click="show = !show" key="clear">Воронеж</p> -->
+				</transition>
+				<transition name="fade">
+					<!-- <ul v-if="show">
+						<li v-for="item in items"><a href="">{{ item }}</a></li>
+					</ul> -->
+				</transition>
+				
+			</div>
+			<a href="index.html">Воронеж</a>
+			<a href="moscow.html">Москва</a>
+			<div class="current">
+				<a href="spb.html">Питер</a>
+			</div>
+		</div>
+	</header>
+	
+		
+	
+
+	<div class="map-container">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6fb6f7f0abcbd91dcf41e5697885d59c1a0cb1ff142c012af2bea01edb8e09b2&amp;width=1000&amp;height=458&&amp;lang=ru_RU&amp;scroll=true"></script>
+	</div>
+	
+	<footer>
+		<p>Created by <a href="vk.com/sorokinin">Igor Sorokin</a> & <a href="vk.com/agornostaevv">Andrey Gornostaev</a></p>
+		<p>
+			Если вы пользуйтесь сайтом и хотите выразить благодарность - можете поддержать проект на Патреоне. Это помагает содержать сайт без рекламы.
+		<p>
+			Если у вас есть вопросы или идеи по получшению работы сайта - пишите <a href="mailto:agornostaevv@gmail.com">на почту</a>.
+		</p>
+		<p>Все права защищены (c) 2019</p>
+	</footer>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
