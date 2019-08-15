@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ComedyMap</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet"> 
+
+	<script src="https://unpkg.com/vue"></script>
+	<!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=51d0a5d8-72d1-47cd-89d4-c74a52b0f789&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+<body>
+	<header>
+
+		<div class="header-container">
+			
+			<h1>Comedymap</h1>
+
+		</div>
+
+		<div class="select-container">
+			<div id="app">
+				<nav>
+					<transition name="fade" mode="out-in">
+						<p class="menu" v-if="!show" @click="show = !show" key = "menu">Воронеж</p>
+						<p class="clear" v-else @click="show = !show" key="clear">Воронеж</p>
+					</transition>
+					<transition name="fade">
+						<ul v-if="show">
+							<!-- <li class="current"><a href="index.html">Воронеж</a></li> -->
+							<li><a href="in_progress.html">Москва</a></li>
+							<hr width="80%" align="center" color="#22200c">
+							<li><a href="in_progress.html">Петербург</a></li>
+						</ul>
+					</transition>
+				</nav>
+			</div>
+			<!-- <div class="current">
+				<a href="index.html">Воронеж</a>
+			</div>
+			<a href="moscow.html">Москва</a>
+			<a href="spb.html">Питер</a> -->
+		</div>
+	</header>
+	
+		
+	
+
+	<!-- <div class="map-container">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6fb6f7f0abcbd91dcf41e5697885d59c1a0cb1ff142c012af2bea01edb8e09b2&amp;width=1000&amp;height=458&&amp;lang=ru_RU&amp;scroll=true"></script>
+	</div> -->
+	<div class="map-container">
+		<div id="map"></div>
+	</div>
+	
+	<footer>
+		<p>
+			За развитием проекта и можно следить тут:
+		</p>
+
+		<div class="but_telega">
+			<a href="t.me/comedy_map">t.me/comedy_map</a>
+		</div>
+	</footer>
+
+	<script src="scripts/script.js"></script>
+	<script src="scripts/map.js"></script>
+
+</body>
+</html>
