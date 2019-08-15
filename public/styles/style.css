@@ -12,17 +12,14 @@ body {
 }
 
 .header-container {
-	height: 30vh;
-	display: block;
-	
-	/*padding-top: -pt;*/
-	/*padding-top: 15px;*/
+	height: 25vh;
+	/*display: block;*/
+
 	background-color: black;
 }
 
 header h1 {
 	color: white;
-	/*font-size: 45pt;*/
 	font-size: 17vh;
 	text-align: center;
 	text-transform: uppercase;
@@ -38,21 +35,21 @@ header h1 {
 	/*height: 65vh;*/
 }
 
-li a, header p, .select-container a {
+header p {
 	/*border: 5px solid orange;*/
 	border-radius: 10vh;
 	align-items: center;
 	cursor: pointer;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	list-style-type: none;
 	text-transform: uppercase;
 
 	transition: all .3s ease;
 	text-decoration: none;
 
-	height: 0.3vh;
-	font-size: 3.5vh;
+	height: 1vh;
+	font-size: 4vh;
 	
 	/*font-size: 20pt;*/
 	color: black;
@@ -60,33 +57,56 @@ li a, header p, .select-container a {
 
 
 	background-color: #ffed28;
-	padding: 3vh 3vw;
+	padding: 4vh 4vw;
 }
 
-/*.select-container a {
-	border: none;
-}*/
+li {
+	padding: 1.5vh 0;
+}
 
-li a:hover, header p:hover, .select-container a:hover {
+li a {
+	color: #ffed28;
+	background-color: black;
+
+	font-size: 3.25vh;
+	text-decoration: none;
+	text-transform: uppercase;
+	/*font-size: 20pt;*/
+	font-weight: 600;
+
+	transition: all .3s ease;
+}
+
+/*li a:hover, */header p:hover/*, .select-container a:hover*/ {
+	color: #ffed28;
+	background-color: black;
+	border: 5px solid yellow;
+}
+
+li a:hover {
+	/*color: black;
+	background-color: #ffed28;*/
+
+	text-decoration: underline;
+}
+
+ul {
+	border: 3px solid yellow;
+	border-radius: 5vh;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	padding: 0 5%;
+}
+
+li a {
 	color: #ffed28;
 	background-color: black;
 }
 
-/*.current a {
-	color: black;
-	background-color: orange;
-}*/
-
-/*li a {
-	text-decoration: none;
-	color: white;
-}*/
-
-/*li a:hover {
-	color: black;
-}*/
-
-#app, #app2 {
+#app {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -94,12 +114,12 @@ li a:hover, header p:hover, .select-container a:hover {
 	/*height: 850px;*/
 }
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
 	#app {
 		width: 100vw;
 		height: 100vh
 	}
-}
+}*/
 
 .fade-enter-active,
 .fade-leave-active {
@@ -112,7 +132,7 @@ li a:hover, header p:hover, .select-container a:hover {
 }
 
 .menu, .clear {
-	transition: none;
+	/*transition: none;*/
 }
 
 /*.clear {

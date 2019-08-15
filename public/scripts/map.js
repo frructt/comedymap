@@ -33,12 +33,12 @@ function init() {
 
 	var litera = new ymaps.Placemark([51.66433407, 39.20528150], {
 	    balloonContentHeader: '<span style="color: black; font-size: 19pt">Литера Б</span>',
-	    balloonContentBody: '<a href="https://vk.com/event161911454" target="_blank" style="text-decoration: underline; color: orange; font-weight: 600; font-size: 12pt">Записаться</a>',
+	    balloonContentBody: '<a href="https://vk.com/event161911454" target="_blank" style="text-decoration: underline; color: red; font-weight: 600; font-size: 12pt">Записаться</a>',
 	    balloonContentFooter: '',
 	    balloonContentFooter: 'Театральная улица, 36',
 	    hintContent: 'Литера Б - Театральная улица, 36'
 	}, {
-		preset: 'islands#darkOrangeDotIcon'
+		preset: 'islands#redDotIcon'
 	});
 
 	var bristol = new ymaps.Placemark([51.66619907, 39.20632350], {
@@ -61,13 +61,24 @@ function init() {
 		preset: 'islands#redDotIcon'
 	});
 
+	var setka = new ymaps.Placemark([51.667529, 39.186812], {
+	    balloonContentHeader: '<span style="color: black; font-size: 19pt">SETKA BAR</span>',
+	    balloonContentBody: '<a href="https://vk.com/event185470283" target="_blank" style="text-decoration: underline; color: red; font-weight: 600; font-size: 12pt">Записаться</a>',
+	    balloonContentFooter: '',
+	    balloonContentFooter: 'Революции 1905 года, 31Г',
+	    hintContent: 'SETKA BAR - Революции 1905 года, 31Г'
+    }, {
+		preset: 'islands#redDotIcon'
+	});
+
 	openMic = new ymaps.GeoObjectCollection();
 
 	openMic
-		.add(nigilist)
+		// .add(nigilist)
 		.add(litera)
-		.add(bristol)
-		.add(set_puaro);
+		// .add(bristol)
+		// .add(set_puaro)
+		.add(setka);
 	var openMicLayout = ymaps.templateLayoutFactory.createClass(
 		'<div class="openMic-containter">' +
 			'$[properties.balloonContentHeader]' +
